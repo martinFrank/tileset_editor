@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -54,14 +55,14 @@
                 <Font name="Arial" size="24"/>
             </font>
         </Label>
-        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <TextField fx:id="tilesetNameText" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
         <Label text="Name:" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1"/>
         <Label text="ID:" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2"/>
         <Label text="Width:" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3"/>
-        <TextField GridPane.columnIndex="2" GridPane.rowIndex="2"/>
-        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+        <TextField fx:id="tilesetIdText" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <TextField fx:id="tilesetWidthText" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
         <Label text="Height:" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4"/>
-        <TextField GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+        <TextField fx:id="tilesetHeightText" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
         <Label text="Images" GridPane.rowIndex="6">
             <font>
                 <Font name="Arial" size="24"/>
@@ -91,10 +92,10 @@
         </ScrollPane>
         <HBox GridPane.rowIndex="5">
             <children>
-                <Button fx:id="addTilesetButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="+"
-                        HBox.hgrow="ALWAYS" onAction="#handleAddTilesetButtonAction"/>
-                <Button fx:id="removeTilesetButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="-"
-                        HBox.hgrow="ALWAYS" onAction="#handleRemoveTilesetButtonAction"/>
+                <Button fx:id="addTilesetButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                        onAction="#handleAddTilesetButtonAction" text="+" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="removeTilesetButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                        onAction="#handleRemoveTilesetButtonAction" text="-" HBox.hgrow="ALWAYS"/>
             </children>
         </HBox>
         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="11">
@@ -105,7 +106,12 @@
         </HBox>
         <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowSpan="5">
             <content>
-                <Pane prefHeight="200.0" prefWidth="200.0"/>
+                <Pane fx:id="tilesetImagePane" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fx:id="tilesetImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </children>
+                </Pane>
             </content>
         </ScrollPane>
         <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7"
