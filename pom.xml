@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>de.frank.martin.games</groupId>
+    <groupId>de.elite.games</groupId>
   <artifactId>tileset-editor</artifactId>
   <version>0.0.1</version>
 
@@ -31,21 +31,16 @@
           <version>1.7.5</version>
       </dependency>
       <dependency>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-log4j12</artifactId>
-          <version>1.7.5</version>
-      </dependency>
-      <dependency>
-          <groupId>de.frank.martin.games</groupId>
-          <artifactId>boardgamelib</artifactId>
-          <version>1.0-SNAPSHOT</version>
-          <scope>compile</scope>
+          <groupId>de.elite.games</groupId>
+          <artifactId>maplib</artifactId>
+          <version>0.3.0</version>
       </dependency>
       <dependency>
           <groupId>de.elite.games</groupId>
-          <artifactId>cli</artifactId>
-          <version>1.0-SNAPSHOT</version>
+          <artifactId>maplibdemo</artifactId>
+          <version>0.0.2</version>
       </dependency>
+
   </dependencies>
 
   <build>
